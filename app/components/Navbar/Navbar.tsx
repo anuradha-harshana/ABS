@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { useAuth } from "../../context/AuthContext";
 import { signOut } from "../../lib/auth/auth-service";
 import { useRouter } from "next/navigation";
@@ -16,19 +16,20 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
-      <div className="font-bold text-xl">
+      <div className="font-bold text-3xl">
         <h3>Avant</h3>
       </div>
       <div className="flex gap-4">
         {user ? (
           <>
-            <span>Welcome, {user.email}</span>
-            <button
-              onClick={handleSignOut}
-              className="bg-red-500 px-3 py-1 rounded hover:bg-red-600"
-            >
+            {/*<div className="flex p-3 items-center justify-center">
+              <a className="px-4 text-xl hover:text-blue-500" href="/dashboard">Customer Registration</a>
+              <a className="px-4 text-xl hover:text-blue-500" href="#">Mechanic Log</a>
+              <a className="px-4 text-xl hover:text-blue-500" href="#">Service Log</a>
+            </div>*/}
+            <Button variant="destructive" size="lg" className="hover:bg-red-500 hover:text-white cursor-pointer" onClick={handleSignOut}>
               Sign Out
-            </button>
+            </Button>
           </>
         ) : (
           <>
