@@ -7,10 +7,8 @@ const generatePdf = async (registerData: RegistrationData) => {
  
   let qrCodeSrc = "";
   try {
-    const qrData = JSON.stringify({
-      engineNumber: registerData.engineNumber,
-      chasisNumber: registerData.chasisNumber,
-    });
+    const baseUrl = "https://abs-sigma.vercel.app"
+    const qrData = `${baseUrl}/portal/${registerData.chasisNumber}/${registerData.engineNumber}`;
     qrCodeSrc = await QRCode.toDataURL(qrData);
   } catch (error) {
     console.error("Error generating QR code:", error);
