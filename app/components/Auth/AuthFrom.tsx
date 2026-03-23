@@ -13,7 +13,11 @@ const AuthForm = () => {
     e.preventDefault();
     const { error } = await signIn(email, password);
 
-    if (error) return alert(error.message);
+    if (error){
+      alert(error.message);
+    }else {
+      alert("Succesfully Loged In")
+    };
 
     router.push("/dashboard");
   };
