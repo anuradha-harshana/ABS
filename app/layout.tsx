@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "./context/AuthContext";
 import { createSupabaseServerClient } from "./lib/supabase/server-client";
+import Footer from "./components/Footer/footer";
 
 const roboto = Open_Sans({
   weight: '400',
@@ -23,7 +24,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
         <AuthProvider initialUser={user}>
-           <main>{children}</main>
+           <main>
+            {children}
+            <Footer />
+           </main>
         </AuthProvider>
       </body>
     </html>
