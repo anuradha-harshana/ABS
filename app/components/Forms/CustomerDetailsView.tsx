@@ -101,10 +101,7 @@ const CustomerDetailsView = ({ customer }: CustomerDetailsViewProps) => {
             <div className="flex-1">
               <h3 className="text-xs font-semibold text-gray-700 mb-1">QR Code Information:</h3>
               <p className="text-xs text-gray-500 mb-1">
-                Scanning this QR code will redirect to:
-              </p>
-              <p className="text-xs text-blue-600 font-mono break-all bg-blue-50 p-2 rounded">
-                {qrCodeUrl}
+                Use this QR code at the service station to update vehicle details.
               </p>
             </div>
             <div className="text-center flex-shrink-0">

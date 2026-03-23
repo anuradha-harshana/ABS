@@ -175,12 +175,12 @@ const generatePdf = async (registerData: RegistrationData) => {
     doc.setTextColor(80, 80, 80);
     doc.setFont("helvetica", "normal");
     doc.text("QR Code contains:", 25, currentY + 5);
-    doc.setFontSize(6);
+    /*doc.setFontSize(6);
     doc.setTextColor(100, 100, 100);
     const qrUrl = `https://abs-sigma.vercel.app/portal/...`;
     doc.text(qrUrl, 25, currentY + 12);
     doc.text(`Chassis: ${registerData.chasisNumber?.substring(0, 15) || 'N/A'}...`, 25, currentY + 19);
-    doc.text(`Engine: ${registerData.engineNumber?.substring(0, 15) || 'N/A'}...`, 25, currentY + 26);
+    doc.text(`Engine: ${registerData.engineNumber?.substring(0, 15) || 'N/A'}...`, 25, currentY + 26);*/
   }
   
   // Add additional info box
